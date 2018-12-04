@@ -8,15 +8,15 @@ You could learn
 3. how to use dockerfile to build image 
 
 ## Build docker container manually 
-- docker run -it --name mycntkdemo microsoft/cntk:2.2-cpu-python3.5 /bin/bash
-- pip install lightgbm: install python lightgbm package in docker.
-- exit: exit from the container.
-- docker start -ia mycntkdemo: start mycntkdemo named container.
-- Ctrl-p + Ctrl-q: move container to the background.
-- docker attach mycntkdemo: move container from background to foreground.
-- docker run -it --name mycntkdemo -v /home/test:/root/test: map local dir(`/home/test`) to docker dir(`/root/test`)
-- docker run -it --name mycntkdemo -v /home/test:/root/test microsoft/cntk:2.2-cpu-python3.5 /bin/bash: map local dir to docker dir when initialize a container.
-- docker commit mycntkdemo mycntkwlgbm:version1: tag container and save as new image.
+- `docker run -it --name mycntkdemo microsoft/cntk:2.2-cpu-python3.5 /bin/bash`
+- `pip install lightgbm`: install python lightgbm package in docker.
+- `exit`: exit from the container.
+- `docker start -ia mycntkdemo`: start mycntkdemo named container.
+- `Ctrl-p + Ctrl-q`: move container to the background.
+- `docker attach mycntkdemo`: move container from background to foreground.
+- `docker run -it --name mycntkdemo -v /home/test:/root/test`: map local dir(`/home/test`) to docker dir(`/root/test`)
+- `docker run -it --name mycntkdemo -v /home/test:/root/test microsoft/cntk:2.2-cpu-python3.5 /bin/bash`: map local dir to docker dir when initialize a container.
+- `docker commit mycntkdemo mycntkwlgbm:version1`: tag container and save as new image.
 
 ## Build docker container using Dockerfile
 
@@ -40,7 +40,7 @@ wheel
 lightgbm
 ```
 
-- docker build -t mycntkwlgbmimage: creates an image named mycntkwlgbmimage by reading Dockerfile.
+- `docker build -t mycntkwlgbmimage`: creates an image named mycntkwlgbmimage by reading Dockerfile.
 
 ## References
 - [초보를 위한 도커 안내서 - 도커란 무엇인가?](https://subicura.com/2017/01/19/docker-guide-for-beginners-1.html)
